@@ -2,10 +2,14 @@ import React from 'react'
 
 import Skills from '../../components/organisms/Skills'
 
-const Contents: React.FC = () => {
+interface Props {
+  skills: Skill[]
+}
+
+const Contents: React.FC<Props> = props => {
   return (
     <div>
-      <Skills />
+      <Skills skills={props.skills} />
     </div>
   )
 }
