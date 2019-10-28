@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Molecules/AvatarList Sample 1`] = `
+<ul
+  className="MuiList-root MuiList-padding"
+>
+  <li
+    className="MuiListItem-root MuiListItem-gutters"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root"
+    >
+      <div
+        className="MuiAvatar-root makeStyles-green-3 MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        Java(6, 8, 11)
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        Spring Framework(3.0.5.Release), Spring Boot(2.1.6.Release), MyBatis(3.5+)
+      </p>
+    </div>
+  </li>
+  <li
+    className="MuiListItem-root MuiListItem-gutters"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root"
+    >
+      <div
+        className="MuiAvatar-root makeStyles-blue-1 MuiAvatar-colorDefault"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M22 18V3H2v15H0v2h24v-2h-2zm-8 0h-4v-1h4v1zm6-3H4V5h16v10z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="MuiListItemText-root MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+      >
+        JavaScript
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        React(16.10.2), Storybook(5.2), Material-UI(4.5.1)
+      </p>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Organisms/Skills Sample 1`] = `
+<div>
+  <ul
+    className="MuiList-root MuiList-padding"
+  >
+    <li
+      className="MuiListItem-root MuiListItem-gutters"
+      disabled={false}
+    >
+      <div
+        className="MuiListItemAvatar-root"
+      >
+        <div
+          className="MuiAvatar-root makeStyles-blue-69 MuiAvatar-colorDefault"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        className="MuiListItemText-root MuiListItemText-multiline"
+      >
+        <span
+          className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        >
+          Java(6, 8, 11)
+        </span>
+        <p
+          className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        >
+          Spring Framework(3.0.5.Release), Spring Boot(2.1.6.Release), MyBatis(3.5+)
+        </p>
+      </div>
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters"
+      disabled={false}
+    >
+      <div
+        className="MuiListItemAvatar-root"
+      >
+        <div
+          className="MuiAvatar-root makeStyles-green-71 MuiAvatar-colorDefault"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M22 18V3H2v15H0v2h24v-2h-2zm-8 0h-4v-1h4v1zm6-3H4V5h16v10z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        className="MuiListItemText-root MuiListItemText-multiline"
+      >
+        <span
+          className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        >
+          JavaScript
+        </span>
+        <p
+          className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
+        >
+          React(16.10.2), Storybook(5.2), Material-UI(4.5.1), JQuery(1.6.2)
+        </p>
+      </div>
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters"
+      disabled={false}
+    >
+      <div
+        className="MuiListItemAvatar-root"
+      >
+        <div
+          className="MuiAvatar-root makeStyles-red-70 MuiAvatar-colorDefault"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M-618-3000H782V600H-618zM0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M20 6H10v6H8V4h6V0H6v6H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        className="MuiListItemText-root"
+      >
+        <span
+          className="MuiTypography-root MuiListItemText-primary MuiTypography-body1"
+        >
+          PostgreSQL(9.0)
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
