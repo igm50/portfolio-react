@@ -1,0 +1,76 @@
+@startuml
+
+title スキーマ定義
+
+package identity {
+
+  entity "人物" as persons {
+    + id
+    ====
+    name
+    mail_address
+  }
+
+  entity "ブログ" as blogs {
+    + id
+    ===
+    - url
+    name
+  }
+
+  persons ||--o{ blogs
+}
+
+package language {
+
+  entity "言語" as languages {
+    + id
+    ===
+    - name
+  }
+
+  entity "ライブラリ" as libraries {
+    + id
+    ===
+    - language_id
+    - name
+  }
+
+  entity "習得言語" as experienced_languages {
+    + id
+    ===
+    - person_id
+    - language_id
+  }
+
+  entity "習得言語のバージョン" as experienced_language_versions {
+    + id
+    ===
+    - experienced_language_id
+    - version
+  }
+
+  entity "習得ライブラリ" as experienced_libraries {
+    + id
+    ===
+    - experienced_language_id
+    - library_id
+  }
+
+  entity "習得ライブラリのバージョン" as library_versions {
+    + id
+    ===
+    - experienced_libraries_id
+    - version
+  }
+
+  languages ||-down-|{ experienced_languages
+  experienced_languages ||-down-|{ experienced_language_versions
+  libraries ||-down-|{ experienced_libraries
+  experienced_libraries ||-down-|{ library_versions
+
+  persons ||-right-|{ experienced_languages
+  experienced_languages ||-right-o{ experienced_libraries
+}
+
+@enduml
