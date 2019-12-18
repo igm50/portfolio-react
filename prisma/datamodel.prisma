@@ -1,4 +1,48 @@
-type User {
+type Person {
   id: ID! @id
   name: String!
+  mailAddress: String! @unique
+  blogs: [Blog!] @relation(onDelete: CASCADE)
+  languages: [LanguageVersion!]! @relation(link: TABLE, name: "ExperiencedLanguages", onDelete: CASCADE)
+  libraries: [LibraryVersion!]! @relation(link: TABLE, name: "ExperiencedLibraries", onDelete: CASCADE)
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Blog {
+  id: ID! @id
+  url: String! @unique
+  name: String!
+  owner: Person! @relation(link: TABLE)
+  createdAt: DateTime! @createdAt
+}
+
+type Language {
+  id: ID! @id
+  name: String!
+  versions: [LanguageVersion!]!
+  createdAt: DateTime! @createdAt
+}
+
+type LanguageVersion {
+  id: ID! @id
+  language: Language! @relation(link: TABLE)
+  version: Float!
+  users: [Person!] @relation(name: "ExperiencedLanguages")
+  createdAt: DateTime! @createdAt
+}
+
+type Library {
+  id: ID! @id
+  language: Language! @relation(link: TABLE)
+  name: String!
+  createdAt: DateTime! @createdAt
+}
+
+type LibraryVersion {
+  id: ID! @id
+  library: Library! @relation(link: TABLE)
+  version: Float!
+  users: [Person!] @relation(name: "ExperiencedLibraries")
+  createdAt: DateTime! @createdAt
 }

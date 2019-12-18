@@ -29,6 +29,20 @@ package language {
     - name
   }
 
+  entity "言語のバージョン" as language_versions {
+    + id
+    ===
+    - language_id
+    - version
+  }
+
+  entity "習得言語" as experienced_languages {
+    + id
+    ===
+    - person_id
+    - language_version_id
+  }
+
   entity "ライブラリ" as libraries {
     + id
     ===
@@ -36,41 +50,29 @@ package language {
     - name
   }
 
-  entity "習得言語" as experienced_languages {
+  entity "ライブラリのバージョン" as library_versions {
     + id
     ===
-    - person_id
-    - language_id
-  }
-
-  entity "習得言語のバージョン" as experienced_language_versions {
-    + id
-    ===
-    - experienced_language_id
+    - library_id
     - version
   }
 
   entity "習得ライブラリ" as experienced_libraries {
     + id
     ===
-    - experienced_language_id
+    - person_id
     - library_id
   }
 
-  entity "習得ライブラリのバージョン" as library_versions {
-    + id
-    ===
-    - experienced_libraries_id
-    - version
-  }
+  languages ||--|{ language_versions
+  language_versions ||--o{ experienced_languages
 
-  languages ||-down-|{ experienced_languages
-  experienced_languages ||-down-|{ experienced_language_versions
-  libraries ||-down-|{ experienced_libraries
-  experienced_libraries ||-down-|{ library_versions
+  languages ||--o{ libraries
+  libraries ||--|{ library_versions
+  library_versions ||--o{ experienced_libraries
 
-  persons ||-right-|{ experienced_languages
-  experienced_languages ||-right-o{ experienced_libraries
+  persons ||--|{ experienced_languages
+  persons ||--o{ experienced_libraries
 }
 
 @enduml
