@@ -84,7 +84,14 @@ exports[`Storyshots Molecules/AvatarList Sample 1`] = `
 `;
 
 exports[`Storyshots Organisms/Skills Sample 1`] = `
-<div>
+<div
+  className="MuiBox-root MuiBox-root-71"
+>
+  <h4
+    className="MuiTypography-root makeStyles-title-69 MuiTypography-h4"
+  >
+    Skills
+  </h4>
   <ul
     className="MuiList-root MuiList-padding"
   >
@@ -96,7 +103,7 @@ exports[`Storyshots Organisms/Skills Sample 1`] = `
         className="MuiListItemAvatar-root"
       >
         <div
-          className="MuiAvatar-root makeStyles-blue-69 MuiAvatar-colorDefault"
+          className="MuiAvatar-root makeStyles-blue-102 MuiAvatar-colorDefault"
         >
           <svg
             aria-hidden="true"
@@ -134,7 +141,7 @@ exports[`Storyshots Organisms/Skills Sample 1`] = `
         className="MuiListItemAvatar-root"
       >
         <div
-          className="MuiAvatar-root makeStyles-green-71 MuiAvatar-colorDefault"
+          className="MuiAvatar-root makeStyles-green-104 MuiAvatar-colorDefault"
         >
           <svg
             aria-hidden="true"
@@ -172,7 +179,7 @@ exports[`Storyshots Organisms/Skills Sample 1`] = `
         className="MuiListItemAvatar-root"
       >
         <div
-          className="MuiAvatar-root makeStyles-red-70 MuiAvatar-colorDefault"
+          className="MuiAvatar-root makeStyles-red-103 MuiAvatar-colorDefault"
         >
           <svg
             aria-hidden="true"

@@ -1,0 +1,45 @@
+version: 2
+jobs:
+  build-client:
+    docker:
+      - image: circleci/node:13.3
+    working_directory: ~/project
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "client/package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: cd ./client && yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "client/package.json" }}
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  test-client:
+    docker:
+      - image: circleci/node:13.3
+    working_directory: ~/project/client
+    steps:
+      - attach_workspace:
+          at: .
+      - run: cd ./client && yarn test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build-client
+      - test-client:
+          requires:
+            - build-client
