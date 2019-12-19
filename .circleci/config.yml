@@ -3,9 +3,11 @@ jobs:
   build-client:
     docker:
       - image: circleci/node:13.3
-    working_directory: /tmp/client
+    working_directory: ~/project
     steps:
       - checkout
+
+      - run: cd ./client
 
       # Download and cache dependencies
       - restore_cache:
@@ -29,7 +31,7 @@ jobs:
   test-client:
     docker:
       - image: circleci/node:13.3
-    working_directory: /tmp/client
+    working_directory: ~/project/client
     steps:
       - attach_workspace:
           at: .
