@@ -7,21 +7,19 @@ jobs:
     steps:
       - checkout
 
-      - run: cd ./client
-
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "client/package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: yarn install
+      - run: cd ./client && yarn install
 
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "client/package.json" }}
 
       - persist_to_workspace:
           root: .
@@ -35,7 +33,7 @@ jobs:
     steps:
       - attach_workspace:
           at: .
-      - run: yarn test
+      - run: cd ./client && yarn test
 
 workflows:
   version: 2
