@@ -3,9 +3,7 @@ jobs:
   build-client:
     docker:
       - image: circleci/node:13.3
-
-    working_directory: ~/repo
-
+    working_directory: /tmp/client
     steps:
       - checkout
 
@@ -23,13 +21,18 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
   test-client:
     docker:
       - image: circleci/node:13.3
-
-    working_directory: ~/repo
-
+    working_directory: /tmp/client
     steps:
+      - attach_workspace:
+          at: .
       - run: yarn test
 
 workflows:
